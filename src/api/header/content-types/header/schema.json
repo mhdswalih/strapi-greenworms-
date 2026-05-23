@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "headers",
+  "info": {
+    "singularName": "header",
+    "pluralName": "headers",
+    "displayName": "Header"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mal_phone_text": {
+      "type": "string"
+    },
+    "eng_phone_text": {
+      "type": "string"
+    },
+    "mal_whatsapp_text": {
+      "type": "string"
+    },
+    "eng_whatsapp_text": {
+      "type": "string"
+    },
+    "mal_req_text": {
+      "type": "string"
+    },
+    "eng_req_text": {
+      "type": "string"
+    }
+  }
+}

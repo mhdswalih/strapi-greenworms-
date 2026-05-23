@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blogs_blogs_s",
+  "info": {
+    "displayName": "blogs "
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false
+    },
+    "Blogs": {
+      "type": "component",
+      "component": "shared.rich-text",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,63 @@
+{
+  "kind": "singleType",
+  "collectionName": "heroes",
+  "info": {
+    "singularName": "hero",
+    "pluralName": "heroes",
+    "displayName": "Hero"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "eng_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "eng_description": {
+      "type": "text"
+    },
+    "mal_contact_name": {
+      "type": "string"
+    },
+    "eng_contact_name": {
+      "type": "string"
+    },
+    "eng_receiver_message": {
+      "type": "text"
+    },
+    "mal_receiver_message": {
+      "type": "text"
+    },
+    "eng_sender_message": {
+      "type": "text"
+    },
+    "mal_sender_message": {
+      "type": "text"
+    },
+    "mal_whatsapp_text": {
+      "type": "text"
+    },
+    "eng_whatsapp_text": {
+      "type": "string"
+    },
+    "mal_phone_text": {
+      "type": "string"
+    },
+    "eng_phone_text": {
+      "type": "string"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.hero"
+      ]
+    }
+  }
+}

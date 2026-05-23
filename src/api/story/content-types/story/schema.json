@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "stories",
+  "info": {
+    "singularName": "story",
+    "pluralName": "stories",
+    "displayName": "story"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eng_title": {
+      "type": "string"
+    },
+    "mal_title": {
+      "type": "string"
+    },
+    "features": {
+      "type": "component",
+      "component": "sections.feature-item",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "cta_sections",
+  "info": {
+    "singularName": "cta-section",
+    "pluralName": "cta-sections",
+    "displayName": "CTA Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "en_title": {
+      "type": "string"
+    },
+    "ml_title": {
+      "type": "string"
+    },
+    "en_description": {
+      "type": "text"
+    },
+    "ml_description": {
+      "type": "text"
+    },
+    "en_whatsapp_text": {
+      "type": "string"
+    },
+    "ml_whatsapp_text": {
+      "type": "string"
+    },
+    "en_phone_text": {
+      "type": "string"
+    },
+    "ml_phone_text": {
+      "type": "string"
+    }
+  }
+}

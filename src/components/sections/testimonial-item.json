@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_sections_testimonial_items",
+  "info": {
+    "displayName": "Testimonial Item"
+  },
+  "options": {},
+  "attributes": {
+    "eng_name": {
+      "type": "string"
+    },
+    "ml_name": {
+      "type": "string"
+    },
+    "eng_shop": {
+      "type": "string"
+    },
+    "mal_shop": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "eng_testimonial": {
+      "type": "text"
+    },
+    "mal_testimonial": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

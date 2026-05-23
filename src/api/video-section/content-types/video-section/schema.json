@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "video_sections",
+  "info": {
+    "singularName": "video-section",
+    "pluralName": "video-sections",
+    "displayName": "Video Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ml_title": {
+      "type": "text"
+    },
+    "eng_title": {
+      "type": "string"
+    }
+  }
+}

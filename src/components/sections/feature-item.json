@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_feature_items",
+  "info": {
+    "displayName": "Feature Item"
+  },
+  "options": {},
+  "attributes": {
+    "title_ml": {
+      "type": "string"
+    },
+    "title_en": {
+      "type": "string"
+    },
+    "desc_ml": {
+      "type": "text"
+    },
+    "desc_en": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
