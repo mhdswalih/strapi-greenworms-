@@ -1,0 +1,56 @@
+name: Deploy Strapi
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Strapi
+        run: npm run build
+
+      - name: Deploy to server via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER || 'ubuntu' }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "config,dist,public,src,scripts,types,package.json,package-lock.json,tsconfig.json,license.txt,favicon.png"
+          target: ${{ secrets.SERVER_DIR }}
+          strip_components: 0
+          overwrite: true
+
+      - name: Restart Strapi on server
+        uses: appleboy/ssh-action@v1.2.2
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER || 'ubuntu' }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd ${{ secrets.SERVER_DIR }}
+            npm ci --omit=dev
+            if command -v pm2 &> /dev/null; then
+              pm2 restart strapi-kochi || pm2 start npm --name strapi-kochi -- start
+            elif command -v systemctl &> /dev/null && systemctl is-active --quiet strapi-kochi; then
+              sudo systemctl restart strapi-kochi
+            else
+              pkill -f "strapi-kochi" || true
+              nohup npm run start > /dev/null 2>&1 &
+            fi
